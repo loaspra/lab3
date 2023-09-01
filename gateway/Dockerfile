@@ -1,14 +1,14 @@
 # syntax=docker/dockerfile:1
 FROM python:3.8-slim-buster
 
-WORKDIR /servicegateway
+WORKDIR /app
 
-RUN pip3 install flask
-RUN pip install requests
-RUN pip install flask_jwt_extended
-RUN pip install requests
-#ImportError: cannot import name 'encode' from 'jwt' (/usr/local/lib/python3.8/site-packages/jwt/__init__.py)
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 5000
 
 COPY . .
 
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+CMD [ "python3", "gateway.py"]

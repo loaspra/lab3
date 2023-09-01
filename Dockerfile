@@ -3,8 +3,11 @@ FROM python:3.8-slim-buster
 
 WORKDIR /serviceconsumer
 
-RUN pip3 install flask
-RUN pip install requests
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 5002
 
 COPY . .
 
