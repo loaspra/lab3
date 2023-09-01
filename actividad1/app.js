@@ -86,12 +86,12 @@ async function get_artist_lyrics(req,res){
     }
 }
 
-
+//Microservices
 app.get('/getduracion',get_duracion)
 app.get('/getlyrics',get_lyrics)
-main_app.get('/getartistlyrics',get_artist_lyrics)
 
-app.get('/getlyrics',get_lyrics)
+//API GateWay
+main_app.get('/getartistlyrics',get_artist_lyrics)
 main_app.get('/',(req,res)=>{
     res.send("Hola!");
 })
