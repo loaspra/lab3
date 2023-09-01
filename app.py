@@ -19,6 +19,3 @@ def obtener_letra():
     letra = cancion_encontrada['text'].values[0]
     
     return jsonify({'cancion': cancion, 'letra': letra})
-
-if __name__ == '__main__':
-    app.run()

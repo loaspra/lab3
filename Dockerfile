@@ -5,7 +5,7 @@ WORKDIR /serviceconsumer
 
 RUN pip3 install flask
 RUN pip install requests
-
+RUN pip3 install pandas
 COPY . .
 
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
