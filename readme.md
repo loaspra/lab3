@@ -34,6 +34,7 @@ error con un codigo de error 401.
 
 para poder ejecutar este script en un contenedor se debe ejecutar el siguiente comando:
 
+La actividad 1 por si sola se encuentra en la carpeta **actividad1**, en **NodeJS**. Correr el archvio **app.js**. 
 ```bash
 docker build -t gateway .
 docker run -d -p 5000:5000 --name gateway_microservice gateway
