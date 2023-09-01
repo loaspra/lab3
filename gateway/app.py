@@ -28,4 +28,12 @@ def artist_lyrics():
         # Si el token es inválido, devolver un mensaje de error
         return jsonify({"error": "Invalid token"}), 401
 
+
+if __name__ == '__main__':
+    app.run()
+
+
 # Aquí se podrían definir otros endpoints para redirigir a otros microservicios
+
+# To run this in a container:
+# docker build -t gateway .

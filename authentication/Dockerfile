@@ -1,9 +1,12 @@
 # syntax=docker/dockerfile:1
 FROM python:3.8-slim-buster
 
-WORKDIR /serviceconsumer
+WORKDIR /serviceauth
 
 RUN pip3 install flask
+RUN pip install requests
+
+RUN pip install flask_jwt_extended
 RUN pip install requests
 
 COPY . .

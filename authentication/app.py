@@ -30,7 +30,11 @@ def verify():
     except InvalidTokenError:
         # Devolver un mensaje de error si el token es inválido o ha expirado
         return jsonify({"error": "Invalid token"}), 401
-    
+
+
+if __name__ == '__main__':
+    app.run()
+
 
 """
 Probar:
